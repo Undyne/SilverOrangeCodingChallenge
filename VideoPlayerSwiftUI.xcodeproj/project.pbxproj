@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,12 @@
 		3AF67A6325A64DBF00D360A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AF67A6225A64DBF00D360A7 /* Preview Assets.xcassets */; };
 		3AF67A6E25A64DBF00D360A7 /* VideoPlayerSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF67A6D25A64DBF00D360A7 /* VideoPlayerSwiftUITests.swift */; };
 		3AF67A7925A64DBF00D360A7 /* VideoPlayerSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF67A7825A64DBF00D360A7 /* VideoPlayerSwiftUIUITests.swift */; };
+		C9A972852B53C39F00EE767E /* Down in Frameworks */ = {isa = PBXBuildFile; productRef = C9A972842B53C39F00EE767E /* Down */; };
+		C9A972882B53C45D00EE767E /* VideoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A972872B53C45D00EE767E /* VideoData.swift */; };
+		C9A9728B2B53C6A400EE767E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C9A9728A2B53C6A400EE767E /* Alamofire */; };
+		C9A9728D2B5508D700EE767E /* NetworkAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A9728C2B5508D700EE767E /* NetworkAccess.swift */; };
+		C9A9728F2B5514B100EE767E /* NetworkAccessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A9728E2B5514B100EE767E /* NetworkAccessTests.swift */; };
+		C9A972912B5519EE00EE767E /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A972902B5519EE00EE767E /* String+Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +51,10 @@
 		3AF67A7425A64DBF00D360A7 /* VideoPlayerSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoPlayerSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AF67A7825A64DBF00D360A7 /* VideoPlayerSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerSwiftUIUITests.swift; sourceTree = "<group>"; };
 		3AF67A7A25A64DBF00D360A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9A972872B53C45D00EE767E /* VideoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoData.swift; sourceTree = "<group>"; };
+		C9A9728C2B5508D700EE767E /* NetworkAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAccess.swift; sourceTree = "<group>"; };
+		C9A9728E2B5514B100EE767E /* NetworkAccessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAccessTests.swift; sourceTree = "<group>"; };
+		C9A972902B5519EE00EE767E /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9A972852B53C39F00EE767E /* Down in Frameworks */,
+				C9A9728B2B53C6A400EE767E /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +108,10 @@
 			isa = PBXGroup;
 			children = (
 				3AF67A5B25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift */,
+				C9A972862B53C43F00EE767E /* Model */,
+				C9A972922B5519F700EE767E /* Utilities */,
 				3AF67A5D25A64DBD00D360A7 /* ContentView.swift */,
+				C9A9728C2B5508D700EE767E /* NetworkAccess.swift */,
 				3AF67A5F25A64DBF00D360A7 /* Assets.xcassets */,
 				3AF67A6425A64DBF00D360A7 /* Info.plist */,
 				3AF67A6125A64DBF00D360A7 /* Preview Content */,
@@ -116,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				3AF67A6D25A64DBF00D360A7 /* VideoPlayerSwiftUITests.swift */,
+				C9A9728E2B5514B100EE767E /* NetworkAccessTests.swift */,
 				3AF67A6F25A64DBF00D360A7 /* Info.plist */,
 			);
 			path = VideoPlayerSwiftUITests;
@@ -128,6 +144,22 @@
 				3AF67A7A25A64DBF00D360A7 /* Info.plist */,
 			);
 			path = VideoPlayerSwiftUIUITests;
+			sourceTree = "<group>";
+		};
+		C9A972862B53C43F00EE767E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C9A972872B53C45D00EE767E /* VideoData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C9A972922B5519F700EE767E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C9A972902B5519EE00EE767E /* String+Date.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +178,10 @@
 			dependencies = (
 			);
 			name = VideoPlayerSwiftUI;
+			packageProductDependencies = (
+				C9A972842B53C39F00EE767E /* Down */,
+				C9A9728A2B53C6A400EE767E /* Alamofire */,
+			);
 			productName = VideoPlayerSwiftUI;
 			productReference = 3AF67A5825A64DBD00D360A7 /* VideoPlayerSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +253,10 @@
 				Base,
 			);
 			mainGroup = 3AF67A4F25A64DBD00D360A7;
+			packageReferences = (
+				C9A972832B53C39F00EE767E /* XCRemoteSwiftPackageReference "Down" */,
+				C9A972892B53C6A400EE767E /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 3AF67A5925A64DBD00D360A7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,8 +299,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9A972912B5519EE00EE767E /* String+Date.swift in Sources */,
 				3AF67A5E25A64DBD00D360A7 /* ContentView.swift in Sources */,
 				3AF67A5C25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift in Sources */,
+				C9A9728D2B5508D700EE767E /* NetworkAccess.swift in Sources */,
+				C9A972882B53C45D00EE767E /* VideoData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9A9728F2B5514B100EE767E /* NetworkAccessTests.swift in Sources */,
 				3AF67A6E25A64DBF00D360A7 /* VideoPlayerSwiftUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -574,6 +618,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C9A972832B53C39F00EE767E /* XCRemoteSwiftPackageReference "Down" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/johnxnguyen/Down";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		C9A972892B53C6A400EE767E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C9A972842B53C39F00EE767E /* Down */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9A972832B53C39F00EE767E /* XCRemoteSwiftPackageReference "Down" */;
+			productName = Down;
+		};
+		C9A9728A2B53C6A400EE767E /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9A972892B53C6A400EE767E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3AF67A5025A64DBD00D360A7 /* Project object */;
 }
