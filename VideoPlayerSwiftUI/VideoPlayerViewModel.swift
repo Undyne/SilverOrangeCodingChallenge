@@ -6,13 +6,16 @@
 //
 
 import Foundation
+import AVKit
+import Combine
 
 class VideoPlayerViewModel: ObservableObject {
     var videos: [VideoData] = []
-    var index: Int? = nil
     var playing: Bool = false
-    var showButtons: Bool = true
-    
+    var showButtons: Bool = false
+    let player = AVPlayer()
+    let objectWillChange = ObservableObjectPublisher()
+
     init() {
         NetworkAccess.shared.getVideos(completion: { result in
             switch result {
@@ -20,8 +23,9 @@ class VideoPlayerViewModel: ObservableObject {
                 self.videos = videoData
                 if videoData.count > 0 {
                     self.index = 0
+                    self.showButtons = true
                 }
-            case .failure(let error):
+            case .failure(_):
                 self.videos = []
                 self.index = -1
                 self.playing = false
@@ -29,49 +33,50 @@ class VideoPlayerViewModel: ObservableObject {
         })
     }
     
-    var videoTitle: String {
-        guard let index = index else {
-            return "Loading Videos"
+    var index: Int? = nil {
+        didSet {
+            print("Index set to \(String(describing: index))")
+            setVideo(index)
+        }
+    }
 
+    func setVideo(_ index: Int?) {
+        guard let index = index else {
+            videoTitle = "Loading Videos"
+            videoURL = nil
+            videoAuthor = nil
+            videoMarkdown = nil
+            return
         }
         
         if index == -1 {
-            return "Failed to load videos"
+            videoTitle = "Failed to load videos"
+            videoURL = nil
+            videoAuthor = nil
         } else {
             let videoData = videos[index]
-            return videoData.title
+            videoTitle = videoData.title
+            videoURL = URL(string: videoData.fullURL)
+            videoAuthor = videoData.author.name
+            videoMarkdown = videoData.descriptionMarkdown
+            playing = false
+            player.pause()
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
         }
     }
     
-    var videoURL: URL? {
-        guard let index = index,
-              index != -1 else {
-            return nil
+    var videoTitle: String = "Loading Videos"
+    var videoURL: URL? = nil {
+        didSet {
+            if let videoURL = videoURL {
+                print("videoURL = \(videoURL)")
+                player.replaceCurrentItem(with: AVPlayerItem(url: videoURL))
+                player.pause()
+            }
         }
-        
-        let videoData = videos[index]
-        return URL(string: videoData.fullURL)
     }
-    
-    var videoAuthor: String? {
-        guard let index = index,
-              index != -1 else {
-            return nil
-        }
-        
-        let videoData = videos[index]
-        return videoData.author.name
-    }
-    
-    var videoMarkdown: String? {
-        guard let index = index,
-              index != -1 else {
-            return nil
-        }
-        
-        let videoData = videos[index]
-        return videoData.descriptionMarkdown
-    }
-
-
+    var videoAuthor: String? = nil
+    var videoMarkdown: String? = nil
 }

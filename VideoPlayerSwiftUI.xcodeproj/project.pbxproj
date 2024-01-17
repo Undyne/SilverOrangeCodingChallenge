@@ -13,7 +13,6 @@
 		3AF67A6325A64DBF00D360A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AF67A6225A64DBF00D360A7 /* Preview Assets.xcassets */; };
 		3AF67A6E25A64DBF00D360A7 /* VideoPlayerSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF67A6D25A64DBF00D360A7 /* VideoPlayerSwiftUITests.swift */; };
 		3AF67A7925A64DBF00D360A7 /* VideoPlayerSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF67A7825A64DBF00D360A7 /* VideoPlayerSwiftUIUITests.swift */; };
-		C9A972852B53C39F00EE767E /* Down in Frameworks */ = {isa = PBXBuildFile; productRef = C9A972842B53C39F00EE767E /* Down */; };
 		C9A972882B53C45D00EE767E /* VideoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A972872B53C45D00EE767E /* VideoData.swift */; };
 		C9A9728B2B53C6A400EE767E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C9A9728A2B53C6A400EE767E /* Alamofire */; };
 		C9A9728D2B5508D700EE767E /* NetworkAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A9728C2B5508D700EE767E /* NetworkAccess.swift */; };
@@ -21,6 +20,7 @@
 		C9A972912B5519EE00EE767E /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A972902B5519EE00EE767E /* String+Date.swift */; };
 		C9A972942B565D5F00EE767E /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A972932B565D5F00EE767E /* NavigationBarModifier.swift */; };
 		C9A972962B565E1D00EE767E /* VideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A972952B565E1D00EE767E /* VideoPlayerViewModel.swift */; };
+		C9A9729B2B57B59500EE767E /* MarkdownKit in Frameworks */ = {isa = PBXBuildFile; productRef = C9A9729A2B57B59500EE767E /* MarkdownKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9A972852B53C39F00EE767E /* Down in Frameworks */,
+				C9A9729B2B57B59500EE767E /* MarkdownKit in Frameworks */,
 				C9A9728B2B53C6A400EE767E /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,8 +185,8 @@
 			);
 			name = VideoPlayerSwiftUI;
 			packageProductDependencies = (
-				C9A972842B53C39F00EE767E /* Down */,
 				C9A9728A2B53C6A400EE767E /* Alamofire */,
+				C9A9729A2B57B59500EE767E /* MarkdownKit */,
 			);
 			productName = VideoPlayerSwiftUI;
 			productReference = 3AF67A5825A64DBD00D360A7 /* VideoPlayerSwiftUI.app */;
@@ -260,8 +260,8 @@
 			);
 			mainGroup = 3AF67A4F25A64DBD00D360A7;
 			packageReferences = (
-				C9A972832B53C39F00EE767E /* XCRemoteSwiftPackageReference "Down" */,
 				C9A972892B53C6A400EE767E /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C9A972992B57B59500EE767E /* XCRemoteSwiftPackageReference "MarkdownKit" */,
 			);
 			productRefGroup = 3AF67A5925A64DBD00D360A7 /* Products */;
 			projectDirPath = "";
@@ -399,7 +399,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -454,7 +454,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -473,7 +473,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"VideoPlayerSwiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = VideoPlayerSwiftUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -494,7 +494,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"VideoPlayerSwiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = VideoPlayerSwiftUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -513,7 +513,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = VideoPlayerSwiftUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -534,7 +534,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = VideoPlayerSwiftUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -628,14 +628,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C9A972832B53C39F00EE767E /* XCRemoteSwiftPackageReference "Down" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/johnxnguyen/Down";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		C9A972892B53C6A400EE767E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -644,18 +636,26 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		C9A972992B57B59500EE767E /* XCRemoteSwiftPackageReference "MarkdownKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bmoliveira/MarkdownKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C9A972842B53C39F00EE767E /* Down */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C9A972832B53C39F00EE767E /* XCRemoteSwiftPackageReference "Down" */;
-			productName = Down;
-		};
 		C9A9728A2B53C6A400EE767E /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C9A972892B53C6A400EE767E /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		C9A9729A2B57B59500EE767E /* MarkdownKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9A972992B57B59500EE767E /* XCRemoteSwiftPackageReference "MarkdownKit" */;
+			productName = MarkdownKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
